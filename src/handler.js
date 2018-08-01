@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const request = require('request');
-// const querystring = require("querystring");
+
 
 
 function handelHomePage(req, res) {
@@ -58,54 +58,46 @@ function handelError(res) {
   });
 }
 
-function handelApi(req, res) {
-  // console.log('hhhh');
 
+
+function handelApi(req, res) {
   var udata = "";
   req.on("data", function(chunk) {
     udata += chunk;
   });
 
   req.on("end", function() {
-    console.log(udata);
     res.writeHead(200, {
       "content-type": "application/json"
     });
     const parsedData = JSON.parse(udata);
-    // console.log(parsedData);
 
-    var val=parsedData.val;
-    // console.log("1111",val);
-    var num=parsedData.num;
-    //select your val & num from data???
-    findCurrency(val,num,res)
+
+    var val = parsedData.val;
+
+    var num = parsedData.num;
+
+    findCurrency(val, num, res)
   });
 }
 
-// var final = function processData(val, num) {
-//   console.log(val,"22222");
-//   var currnvalue = findCurrency(val);
-// }
 
 
 
-function findCurrency(val,num,res){
-  // console.log("dddd",val);
-  var url ="https://api.coindesk.com/v1/bpi/currentprice/"+val;
-  request.get(url,function(err,obj){
+
+function findCurrency(val, num, res) {
+
+  var url = "https://api.coindesk.com/v1/bpi/currentprice/" + val;
+  request.get(url, function(err, obj) {
     if (err) {
       console.error(err);
-    }else {
-      // console.log(typeof obj.body);
-      // console.log(JSON.parse(obj.body).bpi[val],'HANNNNNEEEEEN');
+    } else {
+
 
       var final = JSON.parse(obj.body).bpi[val].rate_float * num;
-      // console.log(JSON.parse(obj.body).bpi[val].rate_float,"final result");
-      res.end(final+"");
+      var string= JSON.stringify(final);
+      res.end(string);
 
-      // console.log(obj);
-
-     // return  obj.bpi[val].rate_float;//that is the currency value 0000$ for Bitcoin
 
     }
 

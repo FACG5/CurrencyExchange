@@ -1,19 +1,22 @@
 const selectedCurrency = document.querySelector('#input');
 const mulInput = document.querySelector('#mulinput');
 const subBtn = document.querySelector('#submit');
-const display = document.querySelector('#output');
+const display =  document.createElement("div");
 const form = document.querySelector('#form');
-// console.log('dom is Running');
-// console.log(document.querySelector('#input'));
+const out =document.querySelector('#out');
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  console.log("ons");
+
   fetch("POST", "/calc", {
     val: selectedCurrency.value,
     num: mulInput.value
   }, res => {
-    console.log("kjghghjghjg");
-    display.textContent = '  Bitcoin equals:'
+    display.textContent = mulInput.value + '  Bitcoins equal:'
      + res + " " + selectedCurrency.value;
-  })
+  });
+  display.classList.add("output");
+  out.appendChild(display);
+
 })
