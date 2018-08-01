@@ -3,27 +3,41 @@
 
 <head>
   <meta charset="utf-8">
-<link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/css/style.css">
   <title></title>
 </head>
 
 <body>
-  <h1>wellcome </h1>
+  <div class="container1">
+    <h1>Bitcoin Converter</h1>
+  </div>
   <form id="form">
-    <input list="currnlist" name="browser"id="input">
-    <datalist id="currnlist">
+    <input list="currnlist" name="browser" id="input" class="inputf">
+
+    <datalist id="currnlist" class="inputf">
     <option value="USD">USD</option>
     <option value="EUR">EUR</option>
     <option value="GBP">GBP</option>
-  </datalist>
-    <input type="submit" id ="submit">
-  </form>
-  <div class="calc">
-    <input type="number" id="mulinput">
-  </div>
-  <div id="output">
+    <option value="AED">AED</option>
+    <option value="ILS">ILS</option>
+    <option value="JOD">JOD</option>
+   <option value="EGP">EGP</option>
+   <option value="TRY">TRY</option>
+    <option value="RUB">RUB</option>
+    <option value="CNY">CNY</option>
+    </datalist>
 
-  </div>
+    <div class="container3">
+      <input type="number" id="mulinput" class="inputf">
+
+    </div>
+    <div class="container3">
+      <input type="submit" id="submit" class="btn1">
+    </div>
+  </form>
+  <div id="out" ></div>
+
+
   <script src="public/js/fetch.js"></script>
   <script src="public/js/dom.js"></script>
 </body>

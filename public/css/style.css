@@ -1,3 +1,65 @@
-body{
-  background-color: blue;
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+body {
+  background-image: url(https://images.pexels.com/photos/315785/pexels-photo-315785.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+}
+
+form {
+  text-align: center;
+}
+
+.container1 {
+  text-align: center;
+  font-style: italic;
+  font-family: Rubki, sans-serif;
+  font-size: 20px;
+  color: white;
+  }
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 24px;
+  color: black;
+}
+
+.inputf {
+  width: 350px;
+  height: 35px;
+  font-size: 16px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn1 {
+  border-radius: 10px;
+  width: 80px;
+  padding: 10px;
+  /* margin-top: 20px;
+  margin-left: 45%; */
+  background-color: #c68c53;
+  box-shadow: 2px;
+  font-size: 14px;
+}
+
+.output {
+  background-color: white;
+  opacity: 0.7;
+  width: 350px;
+  height: 80px;
+  margin: 6px auto;
+  border-radius: 10px;
 }
