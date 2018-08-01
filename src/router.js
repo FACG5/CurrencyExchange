@@ -6,7 +6,8 @@ function router(req, res) {
     handelHomePage(req, res);
   } else if (endponit.includes("public")) {
     serverStaticFile(req, res);
-  } else if (endponit == "/calc" && req.method=='POST') {
+
+  } else if (endponit === "/calc" && req.method === "POST") {
     handelApi(req,res);
   } else {
     handelError(res);
