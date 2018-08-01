@@ -101,7 +101,8 @@ function findCurrency(val,num,res){
 
       var final = JSON.parse(obj.body).bpi[val].rate_float * num;
       // console.log(JSON.parse(obj.body).bpi[val].rate_float,"final result");
-      res.end(final+"");
+      final1=JSON.stringify(final)
+      res.end(final1);
 
       // console.log(obj);
 

@@ -12,8 +12,7 @@ form.addEventListener("submit", (e) => {
     val: selectedCurrency.value,
     num: mulInput.value
   }, res => {
-    console.log("kjghghjghjg");
-    display.textContent = '  Bitcoin equals:'
-     + res + " " + selectedCurrency.value;
+    display.textContent = mulInput.value + '  Bitcoin equals:' + " " +
+      res + " " + selectedCurrency.value;
   })
 })
