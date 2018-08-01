@@ -1,5 +1,4 @@
 # CurrencyExchange
-# CurrencyExchange
 # Our project:
 A website that allows the user to convert from bitcoins into a number of currencies supported by the website
 . First you choose the currency you would like to convert into then the amount of bitcoins you want converted
